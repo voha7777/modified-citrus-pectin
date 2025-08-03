@@ -7,520 +7,123 @@
     <meta name="description" content="Comprehensive resource on Modified Citrus Pectin (MCP): research-backed health benefits, mechanism of action, optimal dosage, and premium quality supplements.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            line-height: 1.6;
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .glass-effect { 
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
+        .section-spacing { padding: 4rem 0; }
+        @media print {
+            .no-print { display: none !important; }
         }
-        .page-section {
-            display: none;
-            min-height: calc(100vh - 80px);
+        .molecular-animation {
+            animation: float 3s ease-in-out infinite;
         }
-        .active-section {
-            display: block;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
-        .nav-link {
-            position: relative;
+        .research-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-        .nav-link.active {
-            color: #4CAF50;
-            font-weight: 600;
-        }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #4CAF50;
-            border-radius: 3px;
-        }
-        .btn-primary {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 0.375rem;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        .btn-primary:hover {
-            background-color: #3e8e41;
-            border-color: #3e8e41;
-        }
-        .benefit-card {
-            border-radius: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-        .product-card {
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-        .header-section {
-            background: linear-gradient(135deg, rgba(76,175,80,0.9) 0%, rgba(27,94,32,0.9) 100%);
-        }
-        .chart-container {
-            height: 400px;
-            width: 100%;
+        .benefit-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
-
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Modified Citrus Pectin",
-        "url": "https://modifiedcitruspectin.com/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://modifiedcitruspectin.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Modified Citrus Pectin",
-        "url": "https://modifiedcitruspectin.com/",
-        "logo": "https://modifiedcitruspectin.com/logo.png",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-800-123-4567",
-            "contactType": "customer service",
-            "availableLanguage": ["English"]
-        },
-        "sameAs": [
-            "https://www.facebook.com/modifiedcitruspectin",
-            "https://twitter.com/mcphealth",
-            "https://www.instagram.com/modifiedcitruspectin"
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "What is Modified Citrus Pectin?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Modified Citrus Pectin (MCP) is a complex polysaccharide derived from the pith of citrus fruit peels. It is modified through a special enzymatic and pH process to create smaller, more bioavailable molecules that can be absorbed into the bloodstream."
-            }
-        }, {
-            "@type": "Question",
-            "name": "What are the health benefits of Modified Citrus Pectin?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Research indicates that MCP may support cardiovascular health, immune function, cellular health, and detoxification. It primarily works by inhibiting galectin-3, a protein associated with fibrosis, inflammation, and cancer progression."
-            }
-        }, {
-            "@type": "Question",
-            "name": "How is Modified Citrus Pectin different from regular pectin?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Regular pectin has a high molecular weight and cannot be absorbed by the body. MCP undergoes a special modification process that reduces its molecular weight and size, allowing it to enter the bloodstream and exert systemic health effects."
-            }
-        }, {
-            "@type": "Question",
-            "name": "What is the recommended dosage of Modified Citrus Pectin?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The typical therapeutic dosage ranges from 5-15 grams per day, often divided into multiple doses. For maintenance, 5 grams once daily is common. However, optimal dosing may vary based on individual health needs and should be discussed with a healthcare provider."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Can Modified Citrus Pectin help with heavy metal detoxification?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, clinical studies have shown that MCP can bind to and remove toxic heavy metals including lead, mercury, and arsenic from the body without affecting essential minerals. A clinical trial demonstrated a 74% average decrease in toxic heavy metals with MCP supplementation."
-            }
-        }]
-    }
-    </script>
 </head>
-<body class="bg-gray-50">
-    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
-            <div class="flex items-center">
-                <h1 class="text-2xl font-bold text-green-600">ModifiedCitrusPectin.com</h1>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50 no-print">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-lg"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">ModifiedCitrusPectin.com</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors">Benefits</a>
+                    <a href="#science" class="text-gray-600 hover:text-blue-600 transition-colors">Science</a>
+                    <a href="#research" class="text-gray-600 hover:text-blue-600 transition-colors">Research</a>
+                    <a href="#products" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a>
+                    <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
             </div>
-            <div class="hidden md:block">
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
-                    <li><a href="#benefits" class="nav-link" data-target="benefits">Benefits</a></li>
-                    <li><a href="#science" class="nav-link" data-target="science">Science</a></li>
-                    <li><a href="#research" class="nav-link" data-target="research">Research</a></li>
-                    <li><a href="#products" class="nav-link" data-target="products">Products</a></li>
-                    <li><a href="#faq" class="nav-link" data-target="faq">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-500 hover:text-green-600">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <ul class="flex flex-col space-y-3 px-4 py-2">
-                <li><a href="#home" class="block nav-link active" data-target="home">Home</a></li>
-                <li><a href="#benefits" class="block nav-link" data-target="benefits">Benefits</a></li>
-                <li><a href="#science" class="block nav-link" data-target="science">Science</a></li>
-                <li><a href="#research" class="block nav-link" data-target="research">Research</a></li>
-                <li><a href="#products" class="block nav-link" data-target="products">Products</a></li>
-                <li><a href="#faq" class="block nav-link" data-target="faq">FAQ</a></li>
-                <li><a href="#contact" class="block nav-link" data-target="contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- HOME SECTION -->
-    <section id="home" class="page-section active-section">
-        <!-- Header Section with Hero Banner -->
-        <div class="header-section py-16 text-white">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                        <h1 class="text-4xl sm:text-5xl font-bold mb-4">The Science of Modified Citrus Pectin</h1>
-                        <p class="text-xl mb-6">Discover the breakthrough natural compound that supports cellular health, detoxification, and immune function.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#benefits" class="btn-primary inline-block" data-target="benefits">Explore Benefits</a>
-                            <a href="#products" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-2 rounded-md font-medium transition duration-300" data-target="products">View Products</a>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/2">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h2 class="text-gray-800 text-2xl font-bold mb-4">What is Modified Citrus Pectin?</h2>
-                            <p class="text-gray-700 mb-4">Modified Citrus Pectin (MCP) is derived from the pith of citrus fruit peels. Unlike regular pectin, MCP undergoes a special modification process that reduces its molecular weight, allowing it to enter the bloodstream and deliver powerful health benefits.</p>
-                            <div class="flex items-center text-green-700">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <p>Clinically researched</p>
-                            </div>
-                            <div class="flex items-center text-green-700">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <p>Science-backed benefits</p>
-                            </div>
-                            <div class="flex items-center text-green-700">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <p>Premium quality</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="molecular-animation absolute top-20 left-20 w-4 h-4 bg-white rounded-full"></div>
+            <div class="molecular-animation absolute top-40 right-32 w-6 h-6 bg-white rounded-full" style="animation-delay: 1s;"></div>
+            <div class="molecular-animation absolute bottom-40 left-40 w-5 h-5 bg-white rounded-full" style="animation-delay: 2s;"></div>
+            <div class="molecular-animation absolute bottom-20 right-20 w-3 h-3 bg-white rounded-full" style="animation-delay: 0.5s;"></div>
         </div>
-
-        <!-- Featured Benefits -->
-        <div class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Key Benefits of Modified Citrus Pectin</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-heartbeat text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Cardiovascular Support</h3>
-                        <p class="text-gray-700">MCP helps support heart health by inhibiting galectin-3, a protein associated with cardiac fibrosis and heart failure progression.</p>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        The Science of<br>
+                        <span class="text-yellow-300">Modified Citrus Pectin</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-200">
+                        Discover the breakthrough natural compound that supports cellular health, detoxification, and immune function through advanced galectin-3 inhibition.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-microscope mr-2"></i>Explore Benefits
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>View Products
+                        </button>
                     </div>
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                    <div class="flex items-center space-x-8">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            <span>Clinically researched</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Immune Support</h3>
-                        <p class="text-gray-700">Research shows MCP can enhance immune function through activation of natural killer cells, T-cells, and B-cells.</p>
-                    </div>
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-tint-slash text-2xl text-green-600"></i>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            <span>Science-backed benefits</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Heavy Metal Detoxification</h3>
-                        <p class="text-gray-700">Clinical studies show MCP effectively binds to and removes toxic heavy metals without affecting essential minerals.</p>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            <span>Premium quality</span>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center mt-10">
-                    <a href="#benefits" class="btn-primary inline-block" data-target="benefits">View All Benefits</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Featured Research -->
-        <div class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-4">Backed by Scientific Research</h2>
-                <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">Modified Citrus Pectin has been the subject of numerous clinical studies demonstrating its effectiveness for various health applications.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-3">Clinical Study Highlight</h3>
-                        <p class="text-gray-700 mb-3">"Clinical benefit in patients with advanced solid tumors treated with modified citrus pectin: a prospective pilot study" - <em>Clinical Medicine Insights: Oncology</em></p>
-                        <p class="text-gray-600">This study demonstrated significant clinical benefits in cancer patients taking modified citrus pectin, including improved quality of life and disease stabilization.</p>
-                        <a href="#research" class="text-green-600 hover:text-green-700 inline-flex items-center mt-3" data-target="research">
-                            Read more <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-3">Heavy Metal Detoxification</h3>
-                        <p class="text-gray-700 mb-3">"Integrative medicine and the role of modified citrus pectin/alginates in heavy metal chelation and detoxification - five case reports" - <em>Forschende Komplementärmedizin</em></p>
-                        <p class="text-gray-600">This study showed a 74% average decrease in toxic heavy metals in patients taking modified citrus pectin, with no side effects reported.</p>
-                        <a href="#research" class="text-green-600 hover:text-green-700 inline-flex items-center mt-3" data-target="research">
-                            Read more <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFITS SECTION -->
-    <section id="benefits" class="page-section">
-        <div class="py-16">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-6 text-center">The Comprehensive Benefits of Modified Citrus Pectin</h1>
-                <p class="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto">Modified Citrus Pectin offers a wide range of science-backed health benefits through its unique ability to inhibit galectin-3 and other biological mechanisms.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-heartbeat text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Cardiovascular Health</h3>
-                        <p class="text-gray-700 mb-4">MCP reduces inflammation and fibrosis in the heart by inhibiting galectin-3, a biomarker associated with heart failure and cardiac fibrosis.</p>
-                        <ul class="text-gray-700 list-disc list-inside">
-                            <li>Helps maintain healthy blood pressure</li>
-                            <li>Supports arterial function</li>
-                            <li>Reduces cardiac inflammation</li>
-                            <li>May decrease risk of heart failure progression</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-shield-alt text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Immune System Support</h3>
-                        <p class="text-gray-700 mb-4">Unsaturated oligogalacturonic acids in MCP stimulate the immune system through activation of important immune cells.</p>
-                        <ul class="text-gray-700 list-disc list-inside">
-                            <li>Activates natural killer (NK) cells</li>
-                            <li>Enhances activity of cytotoxic T-cells</li>
-                            <li>Supports B-cell function</li>
-                            <li>Promotes balanced immune response</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-tint-slash text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Heavy Metal Detoxification</h3>
-                        <p class="text-gray-700 mb-4">Clinical studies show MCP binds to and facilitates the excretion of toxic heavy metals without affecting essential minerals.</p>
-                        <ul class="text-gray-700 list-disc list-inside">
-                            <li>Removes lead, mercury, and arsenic</li>
-                            <li>Preserves essential minerals</li>
-                            <li>Gentler than conventional chelation</li>
-                            <li>Clinically proven effectiveness</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-dna text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Cellular Health Support</h3>
-                        <p class="text-gray-700 mb-4">MCP helps maintain healthy cell growth and function through multiple mechanisms of action.</p>
-                        <ul class="text-gray-700 list-disc list-inside">
-                            <li>Inhibits abnormal cell adhesion</li>
-                            <li>Supports cellular communication</li>
-                            <li>Promotes apoptosis (programmed cell death) when needed</li>
-                            <li>Reduces inflammatory markers</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-brain text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Neurological Support</h3>
-                        <p class="text-gray-700 mb-4">Recent studies show MCP may help protect against neurological damage by preventing blood-brain barrier disruption.</p>
-                        <ul class="text-gray-700 list-disc list-inside">
-                            <li>Supports blood-brain barrier integrity</li>
-                            <li>Reduces neuroinflammation</li>
-                            <li>May improve cognitive skills</li>
-                            <li>Reduces galectin-3 levels in brain tissue</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="benefit-card p-6 bg-white">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-kidney text-2xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Kidney and Liver Health</h3>
-                        <p class="text-gray-700 mb-4">MCP reduces fibrosis in vital organs including the kidneys and liver, helping maintain their optimal function.</p>
-                        <ul class="text-gray-700 list-disc list-inside">
-                            <li>Decreases organ fibrosis</li>
-                            <li>Supports healthy kidney function</li>
-                            <li>Promotes liver detoxification processes</li>
-                            <li>Reduces inflammatory markers</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="bg-green-50 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4 text-center">Explore How MCP Benefits Work Together</h3>
-                    <p class="text-gray-700 mb-6 text-center">Modified Citrus Pectin offers synergistic health benefits through multiple pathways, with galectin-3 inhibition being a central mechanism.</p>
-                    <div class="chart-container">
-                        <canvas id="benefitsChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCIENCE SECTION -->
-    <section id="science" class="page-section">
-        <div class="py-16">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-6 text-center">The Science Behind Modified Citrus Pectin</h1>
-                <p class="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto">Understanding the molecular structure and mechanisms that make MCP a powerful health-promoting compound.</p>
-                
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold mb-6">From Regular Pectin to Modified Citrus Pectin</h2>
-                    <div class="flex flex-wrap items-center mb-12">
-                        <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
-                            <div class="bg-white p-8 rounded-lg shadow-md">
-                                <h3 class="text-xl font-bold mb-4">The Modification Process</h3>
-                                <p class="text-gray-700 mb-4">Regular citrus pectin has a high molecular weight (50,000-300,000 Da) and is too large to be absorbed into the bloodstream. The modification process breaks down pectin into smaller fragments.</p>
-                                <ol class="list-decimal list-inside text-gray-700">
-                                    <li class="mb-2">Extraction from citrus peel pith</li>
-                                    <li class="mb-2">pH modification (typically alkaline conditions around pH 10)</li>
-                                    <li class="mb-2">Controlled enzymatic breakdown or heat treatment</li>
-                                    <li class="mb-2">Size reduction to 5,000-15,000 Da</li>
-                                    <li>Purification and standardization</li>
-                                </ol>
+                <div class="glass-effect rounded-3xl p-8">
+                    <div class="bg-white rounded-2xl p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">What is Modified Citrus Pectin?</h3>
+                        <p class="text-gray-600 mb-6">
+                            Modified Citrus Pectin (MCP) is derived from the pith of citrus fruit peels. Unlike regular pectin, MCP undergoes a special modification process that reduces its molecular weight, allowing it to enter the bloodstream and deliver powerful health benefits.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-flask text-blue-500"></i>
+                                <span class="text-gray-700">Clinically researched</span>
                             </div>
-                        </div>
-                        <div class="w-full lg:w-1/2 lg:pl-8">
-                            <div class="bg-white p-8 rounded-lg shadow-md">
-                                <h3 class="text-xl font-bold mb-4">Key Structural Changes</h3>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li class="mb-2">Reduced molecular weight (5,000-15,000 Da)</li>
-                                    <li class="mb-2">Lower degree of esterification</li>
-                                    <li class="mb-2">Enhanced bioavailability</li>
-                                    <li class="mb-2">Increased ability to enter bloodstream</li>
-                                    <li>Specific affinity for galectin-3 binding</li>
-                                </ul>
-                                <p class="text-gray-700 mt-4">These modifications transform regular pectin into a bioactive compound with systemic health effects.</p>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-heart text-red-500"></i>
+                                <span class="text-gray-700">Science-backed benefits</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold mb-6">Primary Mechanism of Action: Galectin-3 Inhibition</h2>
-                    <div class="bg-white p-8 rounded-lg shadow-md mb-8">
-                        <div class="flex flex-wrap items-center">
-                            <div class="w-full lg:w-2/3 lg:pr-8 mb-6 lg:mb-0">
-                                <h3 class="text-xl font-bold mb-4">What is Galectin-3?</h3>
-                                <p class="text-gray-700 mb-4">Galectin-3 is a protein that plays a significant role in many biological processes including:</p>
-                                <ul class="list-disc list-inside text-gray-700 mb-4">
-                                    <li>Cell-to-cell adhesion</li>
-                                    <li>Cell proliferation and differentiation</li>
-                                    <li>Angiogenesis (formation of new blood vessels)</li>
-                                    <li>Inflammation</li>
-                                    <li>Fibrosis (tissue scarring)</li>
-                                </ul>
-                                <p class="text-gray-700">When overexpressed, galectin-3 contributes to various health concerns including cancer progression, heart disease, fibrosis of organs, and chronic inflammation.</p>
-                            </div>
-                            <div class="w-full lg:w-1/3">
-                                <img src="https://www.mdpi.com/nutrients/nutrients-11-02619/article_deploy/html/images/nutrients-11-02619-g001-550.jpg" alt="Galectin-3 structure and function" class="rounded-lg shadow-md">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold mb-4">How MCP Inhibits Galectin-3</h3>
-                        <div class="flex flex-wrap">
-                            <div class="w-full lg:w-1/3 mb-6 lg:mb-0">
-                                <img src="https://www.mdpi.com/nutrients/nutrients-11-02619/article_deploy/html/images/nutrients-11-02619-g002.png" alt="MCP binding to Galectin-3" class="rounded-lg shadow-md">
-                            </div>
-                            <div class="w-full lg:w-2/3 lg:pl-8">
-                                <p class="text-gray-700 mb-4">Modified Citrus Pectin binds to the carbohydrate recognition domain (CRD) of galectin-3, effectively blocking its ability to interact with its natural ligands.</p>
-                                <p class="text-gray-700 mb-4">This inhibition mechanism:</p>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li class="mb-2">Prevents galectin-3 from promoting cell aggregation and metastasis</li>
-                                    <li class="mb-2">Reduces inflammatory cascade activation</li>
-                                    <li class="mb-2">Decreases tissue fibrosis and scarring</li>
-                                    <li class="mb-2">Limits abnormal cell proliferation</li>
-                                    <li>Restores normal immune surveillance</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold mb-6">Additional Mechanisms of Action</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-bold mb-3">Heavy Metal Chelation</h3>
-                            <p class="text-gray-700">MCP contains negatively charged groups (carboxyl groups) that can bind to positively charged heavy metal ions, forming stable complexes that can be excreted from the body. Unlike conventional chelating agents, MCP doesn't deplete essential minerals.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-bold mb-3">Immune Modulation</h3>
-                            <p class="text-gray-700">MCP enhances the cytotoxicity of natural killer (NK) cells and activates other immune cells through complex carbohydrate recognition pathways, helping the immune system function more effectively.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-bold mb-3">Anti-Inflammatory Effects</h3>
-                            <p class="text-gray-700">By inhibiting galectin-3 and the TLR4/MyD88/NF-κB signaling pathway, MCP reduces the production of pro-inflammatory cytokines and mediators, helping resolve chronic inflammation.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-bold mb-3">Antioxidant Activity</h3>
-                            <p class="text-gray-700">MCP exhibits antioxidant properties, helping to neutralize free radicals and reduce oxidative stress, which contributes to its overall protective effects.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-green-50 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">Bioavailability of Modified Citrus Pectin</h3>
-                    <div class="flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 lg:pr-8 mb-6 lg:mb-0">
-                            <p class="text-gray-700 mb-4">Unlike regular pectin, which remains in the digestive tract, Modified Citrus Pectin's reduced molecular size allows it to be absorbed into the bloodstream, where it can exert systemic effects throughout the body.</p>
-                            <div class="bg-white p-4 rounded-md">
-                                <h4 class="font-bold mb-2">Critical Properties for Effectiveness</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Molecular weight between 5,000-15,000 Da</li>
-                                    <li>Specific esterification pattern</li>
-                                    <li>Controlled fragmentation of the pectin chain</li>
-                                    <li>Proper solubility characteristics</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/3">
-                            <div class="chart-container" style="height: 300px;">
-                                <canvas id="bioavailabilityChart"></canvas>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-award text-yellow-500"></i>
+                                <span class="text-gray-700">Premium quality</span>
                             </div>
                         </div>
                     </div>
@@ -529,798 +132,707 @@
         </div>
     </section>
 
-    <!-- RESEARCH SECTION -->
-    <section id="research" class="page-section">
-        <div class="py-16">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-6 text-center">Clinical Research on Modified Citrus Pectin</h1>
-                <p class="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto">Exploring the evidence behind MCP's health benefits through clinical studies and scientific research.</p>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-bold mb-4">Cancer Research</h2>
-                        <div class="mb-6 pb-6 border-b border-gray-200">
-                            <h3 class="text-xl font-bold mb-2">Clinical Benefit in Advanced Solid Tumors</h3>
-                            <p class="text-gray-600 mb-2"><em>Clinical Medicine Insights: Oncology (2007)</em></p>
-                            <p class="text-gray-700 mb-3">This prospective pilot study evaluated MCP in patients with advanced solid tumors. Results showed improved quality of life and disease stabilization in several patients.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Disease stabilization in 20.7% of patients</li>
-                                    <li>Improved quality of life</li>
-                                    <li>Well-tolerated with minimal side effects</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">MCP and PSA Levels in Prostate Cancer</h3>
-                            <p class="text-gray-600 mb-2"><em>Prostate Cancer and Prostatic Diseases</em></p>
-                            <p class="text-gray-700 mb-3">A phase II study evaluating the effects of MCP on prostate-specific antigen (PSA) doubling time in men with prostate cancer showed promising results.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Increased PSA doubling time (slower progression)</li>
-                                    <li>70% of patients showed stabilization of disease</li>
-                                    <li>No significant side effects reported</li>
-                                </ul>
-                            </div>
-                        </div>
+    <!-- Key Benefits Section -->
+    <section id="benefits" class="section-spacing bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Key Benefits of Modified Citrus Pectin</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover how MCP supports your health through multiple scientifically-proven pathways
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center hover-lift bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-2xl"></i>
                     </div>
-                    
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-bold mb-4">Heavy Metal Detoxification Studies</h2>
-                        <div class="mb-6 pb-6 border-b border-gray-200">
-                            <h3 class="text-xl font-bold mb-2">MCP in Lead-Exposed Children</h3>
-                            <p class="text-gray-600 mb-2"><em>Alternative Therapies in Health and Medicine (2008)</em></p>
-                            <p class="text-gray-700 mb-3">This clinical trial evaluated MCP's ability to remove lead in children hospitalized with toxic lead levels.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Increased urinary excretion of lead</li>
-                                    <li>Safe and well-tolerated by children</li>
-                                    <li>No side effects reported</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Five Case Studies on Heavy Metal Chelation</h3>
-                            <p class="text-gray-600 mb-2"><em>Forschende Komplementärmedizin (2007)</em></p>
-                            <p class="text-gray-700 mb-3">This report presented five case studies of patients with different medical conditions and heavy metal toxicity treated with MCP.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>74% average decrease in toxic heavy metals</li>
-                                    <li>No side effects reported</li>
-                                    <li>Effective for lead, mercury, and arsenic removal</li>
-                                    <li>Essential minerals were preserved</li>
-                                </ul>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Cardiovascular Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        MCP helps support heart health by inhibiting galectin-3, a protein associated with cardiac fibrosis and heart failure progression.
+                    </p>
+                    <ul class="text-sm text-gray-600 text-left space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Helps maintain healthy blood pressure</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Supports arterial function</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Reduces cardiac inflammation</li>
+                    </ul>
+                </div>
+
+                <div class="text-center hover-lift bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Immune Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        Research shows MCP can enhance immune function through activation of natural killer cells, T-cells, and B-cells.
+                    </p>
+                    <ul class="text-sm text-gray-600 text-left space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Activates natural killer (NK) cells</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Enhances T-cell activity</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Promotes balanced immune response</li>
+                    </ul>
+                </div>
+
+                <div class="text-center hover-lift bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-2xl">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-atom text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Heavy Metal Detoxification</h3>
+                    <p class="text-gray-600 mb-6">
+                        Clinical studies show MCP effectively binds to and removes toxic heavy metals without affecting essential minerals.
+                    </p>
+                    <ul class="text-sm text-gray-600 text-left space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Removes lead, mercury, and arsenic</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Preserves essential minerals</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Gentler than conventional chelation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center hover-lift bg-gradient-to-br from-orange-50 to-red-100 p-8 rounded-2xl">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Neurological Support</h3>
+                    <p class="text-gray-600">
+                        Recent studies show MCP may help protect against neurological damage by preventing blood-brain barrier disruption and reducing neuroinflammation.
+                    </p>
+                </div>
+
+                <div class="text-center hover-lift bg-gradient-to-br from-teal-50 to-cyan-100 p-8 rounded-2xl">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-dna text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Cellular Health Support</h3>
+                    <p class="text-gray-600">
+                        MCP helps maintain healthy cell growth and function through multiple mechanisms, including inhibiting abnormal cell adhesion.
+                    </p>
+                </div>
+
+                <div class="text-center hover-lift bg-gradient-to-br from-pink-50 to-rose-100 p-8 rounded-2xl">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Kidney & Liver Health</h3>
+                    <p class="text-gray-600">
+                        MCP reduces fibrosis in vital organs including the kidneys and liver, helping maintain their optimal function.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section id="science" class="section-spacing bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">The Science Behind Modified Citrus Pectin</h2>
+                <p class="text-xl text-gray-600">Understanding the molecular mechanisms that make MCP effective</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">From Regular Pectin to Modified Citrus Pectin</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-3">The Modification Process</h4>
+                            <p class="text-gray-600 mb-4">
+                                Regular citrus pectin has a high molecular weight (50,000-300,000 Da) and is too large to be absorbed into the bloodstream. The modification process breaks down pectin into smaller fragments.
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs">1</div>
+                                    <span>Extraction from citrus peel pith</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs">2</div>
+                                    <span>pH modification (alkaline conditions around pH 10)</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs">3</div>
+                                    <span>Controlled enzymatic breakdown or heat treatment</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs">4</div>
+                                    <span>Size reduction to 5,000-15,000 Da</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs">5</div>
+                                    <span>Purification and standardization</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-bold mb-4">Cardiovascular Research</h2>
-                        <div class="mb-6 pb-6 border-b border-gray-200">
-                            <h3 class="text-xl font-bold mb-2">MCP and Arterial Stiffness</h3>
-                            <p class="text-gray-600 mb-2"><em>JACC: Basic to Translational Science (2021)</em></p>
-                            <p class="text-gray-700 mb-3">This study examined the effects of MCP on arterial stiffness and hypertension through galectin-3 inhibition.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Reduced arterial stiffness markers</li>
-                                    <li>Decreased blood pressure</li>
-                                    <li>Inhibition of galectin-3's pro-fibrotic effects</li>
-                                </ul>
+
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-6">Primary Mechanism: Galectin-3 Inhibition</h4>
+                        <p class="text-gray-600 mb-6">
+                            Modified Citrus Pectin binds to the carbohydrate recognition domain (CRD) of galectin-3, effectively blocking its ability to interact with its natural ligands.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h5 class="font-semibold text-gray-800">What is Galectin-3?</h5>
+                                <p class="text-gray-600 text-sm">A protein that plays a significant role in cell adhesion, proliferation, inflammation, and fibrosis.</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h5 class="font-semibold text-gray-800">How MCP Works</h5>
+                                <p class="text-gray-600 text-sm">MCP prevents galectin-3 from promoting cell aggregation, reduces inflammation, and limits abnormal cell proliferation.</p>
                             </div>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Cardiac Fibrosis Prevention</h3>
-                            <p class="text-gray-600 mb-2"><em>Molecular Medicine Reports (2017)</em></p>
-                            <p class="text-gray-700 mb-3">This study investigated how MCP inhibits galectin-3 function to reduce atherosclerotic lesions in laboratory models.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Reduced atherosclerotic plaque formation</li>
-                                    <li>Decreased inflammation markers</li>
-                                    <li>Inhibited galectin-3-mediated processes</li>
-                                </ul>
+
+                        <div class="mt-8 grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">50,000-300,000</div>
+                                <div class="text-sm text-gray-600">Regular Pectin (Da)</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">5,000-15,000</div>
+                                <div class="text-sm text-gray-600">Modified Pectin (Da)</div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h2 class="text-2xl font-bold mb-4">Neurological Research</h2>
-                        <div class="mb-6 pb-6 border-b border-gray-200">
-                            <h3 class="text-xl font-bold mb-2">Blood-Brain Barrier Protection</h3>
-                            <p class="text-gray-600 mb-2"><em>Stroke (2018)</em></p>
-                            <p class="text-gray-700 mb-3">This study showed MCP prevents blood-brain barrier disruption, potentially offering neuroprotective effects.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Preserved blood-brain barrier integrity</li>
-                                    <li>Inhibited TLR4 signaling</li>
-                                    <li>Reduced neuroinflammation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Effects on Dementia Models</h3>
-                            <p class="text-gray-600 mb-2"><em>Cells (2023)</em></p>
-                            <p class="text-gray-700 mb-3">Research evaluating MCP's effects on dementia found it had antioxidant activity and reduced inflammatory markers.</p>
-                            <div class="bg-green-50 p-4 rounded-md">
-                                <h4 class="font-bold mb-1">Key Findings:</h4>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Enhanced cognitive skills</li>
-                                    <li>Reduced galectin-3 levels</li>
-                                    <li>Decreased inflammatory markers</li>
-                                    <li>Demonstrated antioxidant activity</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md mb-16">
-                    <h2 class="text-2xl font-bold mb-6 text-center">Ongoing Clinical Trials</h2>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full bg-white">
-                            <thead class="bg-green-50">
-                                <tr>
-                                    <th class="py-3 px-4 text-left">Study Title</th>
-                                    <th class="py-3 px-4 text-left">Focus Area</th>
-                                    <th class="py-3 px-4 text-left">Status</th>
-                                    <th class="py-3 px-4 text-left">Identifier</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <tr>
-                                    <td class="py-3 px-4">Effect of Modified Citrus Pectin on PSA Kinetics in Biochemical Relapse of Prostate Cancer</td>
-                                    <td class="py-3 px-4">Prostate Cancer</td>
-                                    <td class="py-3 px-4">Completed</td>
-                                    <td class="py-3 px-4">NCT01681823</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4">Modified Citrus Pectin in Treating Patients With Solid Tumors That Have Not Responded to Treatment</td>
-                                    <td class="py-3 px-4">Advanced Cancer</td>
-                                    <td class="py-3 px-4">Completed</td>
-                                    <td class="py-3 px-4">NCT00066052</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4">MCP for Prevention of Post-Surgical Fibrosis</td>
-                                    <td class="py-3 px-4">Fibrosis</td>
-                                    <td class="py-3 px-4">Recruiting</td>
-                                    <td class="py-3 px-4">NCT04810781</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4">Modified Citrus Pectin and Galectin-3 in Heart Failure with Preserved Ejection Fraction</td>
-                                    <td class="py-3 px-4">Heart Failure</td>
-                                    <td class="py-3 px-4">Active</td>
-                                    <td class="py-3 px-4">NCT04619979</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                <div class="bg-green-50 p-8 rounded-lg">
-                    <h2 class="text-2xl font-bold mb-4 text-center">Research Publication Metrics</h2>
-                    <p class="text-center text-gray-700 mb-8">The scientific interest in Modified Citrus Pectin has grown significantly over the past two decades, with increasing numbers of peer-reviewed publications.</p>
-                    <div class="chart-container">
-                        <canvas id="publicationsChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION -->
-    <section id="products" class="page-section">
-        <div class="py-16">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-6 text-center">Premium Modified Citrus Pectin Products</h1>
-                <p class="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto">Discover our high-quality Modified Citrus Pectin supplements, formulated for optimal effectiveness and bioavailability.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                  <div class="product-card bg-white">
-                        <img src="https://remedysnutrition.com/cdn/shop/files/modified-citrus-pectin-front-bottle.webp?v=1745182714&width=550" alt="Remedy's Nutrition MCP Capsules" class="w-full h-64 object-contain bg-gray-100 p-4">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Remedy's Nutrition MCP</h3>
-                            <p class="text-gray-700 mb-4">Made in USA with 100% easily absorbable Modified Citrus Pectin. Contains 1000mg per capsule for optimal galectin-3 inhibition and heavy metal detox support.</p>
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star-half-alt text-yellow-500"></i>
-                                <span class="ml-2 text-gray-600">(398 reviews)</span>
-                            </div>
-                            <ul class="text-gray-700 mb-6 list-disc list-inside">
-                                <li>60 vegan capsules</li>
-                                <li>2-month supply</li>
-                                <li>Made in USA</li>
-                                <li>No fillers or additives</li>
-                                <li>Non-GMO & gluten-free</li>
-                            </ul>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-green-600">$39.99</span>
-                                <button class="btn-primary">Add to Cart</button>
-                            </div>
+    <!-- Research Section -->
+    <section id="research" class="section-spacing bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Backed by Scientific Research</h2>
+                <p class="text-xl text-gray-600">Modified Citrus Pectin has been the subject of numerous clinical studies</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <div class="research-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-microscope text-white"></i>
                         </div>
-                    </div>
-                    
-                    <div class="product-card bg-white">
-                        <img src="https://i5.walmartimages.com/asr/bf3cf589-ddd4-4ee0-a805-f78b53caea03.72cb41aefdfd6090ad06dddefcd62efb.jpeg" alt="MCP Ultra-Pure Powder" class="w-full h-64 object-contain bg-gray-100 p-4">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">MCP Ultra-Pure Powder</h3>
-                            <p class="text-gray-700 mb-4">Our premium powder formula offers maximum flexibility for dosing and is easily mixed with water or juice.</p>
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star-half-alt text-yellow-500"></i>
-                                <span class="ml-2 text-gray-600">(87 reviews)</span>
-                            </div>
-                            <ul class="text-gray-700 mb-6 list-disc list-inside">
-                                <li>454g powder (90 servings)</li>
-                                <li>3-month supply</li>
-                                <li>5g scoop included</li>
-                                <li>Unflavored & sugar-free</li>
-                            </ul>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-green-600">$79.99</span>
-                                <button class="btn-primary">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card bg-white">
-                        <img src="https://m.media-amazon.com/images/I/71GPyTinzPL._UF1000,1000_QL80_.jpg" alt="MCP Advanced Formula" class="w-full h-64 object-contain bg-gray-100 p-4">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">MCP Advanced Formula</h3>
-                            <p class="text-gray-700 mb-4">Our most potent formula with enhanced bioavailability, designed for maximum therapeutic benefits.</p>
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <span class="ml-2 text-gray-600">(156 reviews)</span>
-                            </div>
-                            <ul class="text-gray-700 mb-6 list-disc list-inside">
-                                <li>120 vegetarian capsules</li>
-                                <li>2-month supply</li>
-                                <li>Maximum absorption</li>
-                                <li>With synergistic ingredients</li>
-                            </ul>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-green-600">$69.99</span>
-                                <button class="btn-primary">Add to Cart</button>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Clinical Study Highlight</h3>
+                            <p class="text-gray-600 mb-4">
+                                "Clinical benefit in patients with advanced solid tumors treated with modified citrus pectin: a prospective pilot study" - <em>Clinical Medicine Insights: Oncology</em>
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                This study demonstrated significant clinical benefits in cancer patients taking modified citrus pectin, including improved quality of life and disease stabilization.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold text-blue-600">20.7%</div>
+                                        <div class="text-xs text-gray-600">Disease stabilization</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-green-600">↑</div>
+                                        <div class="text-xs text-gray-600">Quality of life</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-purple-600">0</div>
+                                        <div class="text-xs text-gray-600">Serious side effects</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold mb-8 text-center">Product Quality Standards</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-certificate text-2xl text-green-600"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">Third-Party Tested</h3>
-                            <p class="text-gray-700">All our products are tested by independent laboratories for purity, potency, and safety, ensuring you receive the highest quality MCP available.</p>
+
+                <div class="research-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-atom text-white"></i>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-flask text-2xl text-green-600"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Heavy Metal Detoxification</h3>
+                            <p class="text-gray-600 mb-4">
+                                "Integrative medicine and the role of modified citrus pectin/alginates in heavy metal chelation and detoxification - five case reports" - <em>Forschende Komplementärmedizin</em>
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                This study showed a 74% average decrease in toxic heavy metals in patients taking modified citrus pectin, with no side effects reported.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold text-red-600">74%</div>
+                                        <div class="text-xs text-gray-600">Metal reduction</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-blue-600">5</div>
+                                        <div class="text-xs text-gray-600">Case studies</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-green-600">0</div>
+                                        <div class="text-xs text-gray-600">Side effects</div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-xl font-bold mb-3">Optimal Molecular Weight</h3>
-                            <p class="text-gray-700">Our MCP is specifically modified to achieve the optimal molecular weight (5,000-15,000 Da) for maximum bioavailability and efficacy.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-leaf text-2xl text-green-600"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">Clean Ingredients</h3>
-                            <p class="text-gray-700">Our products are free from artificial colors, flavors, preservatives, gluten, soy, dairy, and GMOs, making them suitable for most dietary needs.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold mb-8 text-center">Recommended Usage Guidelines</h2>
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div>
-                                <h3 class="text-xl font-bold mb-4">General Dosage Recommendations</h3>
-                                <p class="text-gray-700 mb-4">The optimal dosage of Modified Citrus Pectin varies based on individual health needs and goals.</p>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li class="mb-2"><strong>Standard maintenance dose:</strong> 5 grams once daily</li>
-                                    <li class="mb-2"><strong>Therapeutic dose:</strong> 5 grams three times daily (15g total)</li>
-                                    <li class="mb-2"><strong>Heavy metal detoxification:</strong> 10-15 grams daily, divided into 2-3 doses</li>
-                                    <li><strong>Children:</strong> Consult with a healthcare provider for appropriate dosing</li>
-                                </ul>
+            </div>
+
+            <!-- Research Statistics -->
+            <div class="bg-gray-50 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Research Publication Growth</h3>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">150+</div>
+                        <div class="text-gray-600">Published Studies</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <div class="text-3xl font-bold text-green-600 mb-2">25+</div>
+                        <div class="text-gray-600">Clinical Trials</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">20</div>
+                        <div class="text-gray-600">Years of Research</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <div class="text-3xl font-bold text-orange-600 mb-2">10+</div>
+                        <div class="text-gray-600">Health Applications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-spacing bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Premium Modified Citrus Pectin Products</h2>
+                <p class="text-xl text-gray-600">High-quality MCP supplements formulated for optimal effectiveness</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-pills text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">MCP Capsules</h3>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Made in USA with 100% easily absorbable Modified Citrus Pectin. Contains 1000mg per capsule for optimal galectin-3 inhibition.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">60 vegan capsules</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">2-month supply</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Made in USA</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Non-GMO & gluten-free</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-800 mb-4">$39.99</div>
+                        <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors w-full">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift border-4 border-yellow-400">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-gray-800 px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR</span>
+                    </div>
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-flask text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">MCP Ultra-Pure Powder</h3>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Our premium powder formula offers maximum flexibility for dosing and is easily mixed with water or juice.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">454g powder (90 servings)</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">3-month supply</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">5g scoop included</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Unflavored & sugar-free</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-800 mb-4">$79.99</div>
+                        <button class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition-colors w-full">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">MCP Advanced Formula</h3>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Our most potent formula with enhanced bioavailability, designed for maximum therapeutic benefits.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">120 vegetarian capsules</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">2-month supply</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Maximum absorption</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">With synergistic ingredients</span>
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-800 mb-4">$69.99</div>
+                        <button class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors w-full">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quality Standards -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Quality Standards</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Third-Party Tested</h4>
+                        <p class="text-gray-600 text-sm">All products tested by independent laboratories for purity, potency, and safety</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-balance-scale text-green-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Optimal Molecular Weight</h4>
+                        <p class="text-gray-600 text-sm">Specifically modified to achieve 5,000-15,000 Da for maximum bioavailability</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-purple-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Clean Ingredients</h4>
+                        <p class="text-gray-600 text-sm">Free from artificial colors, flavors, preservatives, gluten, soy, dairy, and GMOs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-spacing bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Find answers to commonly asked questions about Modified Citrus Pectin</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">What is Modified Citrus Pectin?</h3>
+                        <p class="text-gray-600">
+                            Modified Citrus Pectin (MCP) is a complex polysaccharide derived from the pith of citrus fruit peels. It is modified through a special enzymatic and pH process to create smaller, more bioavailable molecules that can be absorbed into the bloodstream. Unlike regular pectin, which remains in the digestive tract, MCP can enter the circulation and exert systemic health effects.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">How is Modified Citrus Pectin different from regular pectin?</h3>
+                        <p class="text-gray-600">
+                            Regular pectin has a high molecular weight (50,000-300,000 Da) and cannot be absorbed by the body. MCP undergoes a special modification process that reduces its molecular weight to 5,000-15,000 Da, allowing it to enter the bloodstream and exert systemic health effects. The modification process also alters the degree of esterification and creates specific binding sites that enable MCP to interact with galectin-3 and other targets in the body.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">What are the main health benefits of Modified Citrus Pectin?</h3>
+                        <p class="text-gray-600 mb-4">
+                            Research indicates that MCP offers multiple health benefits, primarily through its ability to inhibit galectin-3. The main benefits include:
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Cardiovascular support and reduction of fibrosis</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Immune system enhancement</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Heavy metal detoxification</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Support for cellular health</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Anti-inflammatory effects</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Neurological and cognitive support</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">What is the recommended dosage of Modified Citrus Pectin?</h3>
+                        <p class="text-gray-600">
+                            The typical therapeutic dosage ranges from 5-15 grams per day, often divided into multiple doses. For maintenance, 5 grams once daily is common. For specific health concerns like heavy metal detoxification, higher doses (10-15g daily) may be recommended. The powder form allows for flexible dosing, while capsules provide convenience. Optimal dosing may vary based on individual health needs and should be discussed with a healthcare provider.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">How long does it take to see benefits from Modified Citrus Pectin?</h3>
+                        <p class="text-gray-600">
+                            The timeframe for experiencing benefits from MCP varies depending on the individual and the health concern being addressed. Some people report feeling differences within a few weeks, while others may need 2-3 months of consistent use. For heavy metal detoxification, significant results typically appear after 1-3 months. For cardiovascular and cellular health support, longer-term use (3+ months) may be needed to observe meaningful changes in biomarkers.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Is Modified Citrus Pectin safe to take?</h3>
+                        <p class="text-gray-600">
+                            Yes, Modified Citrus Pectin is generally recognized as safe for consumption. Clinical studies have shown it to be well-tolerated with minimal to no side effects. It's derived from the peel of citrus fruits, which have been consumed safely for centuries. However, as with any supplement, it's recommended to consult with a healthcare provider before starting MCP, especially if you have existing health conditions or are taking medications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-spacing bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-300">Have questions about Modified Citrus Pectin? We're here to help.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-4">Administration Tips</h3>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li class="mb-2"><strong>Capsules:</strong> Take with 8 oz. of water, with or without food</li>
-                                    <li class="mb-2"><strong>Powder:</strong> Mix thoroughly in water, juice, or smoothie</li>
-                                    <li class="mb-2"><strong>Timing:</strong> For best absorption, take 30 minutes before or 1.5 hours after meals</li>
-                                    <li class="mb-2"><strong>Consistency:</strong> Regular daily use provides the best results</li>
-                                    <li><strong>Duration:</strong> Allow 4-8 weeks for full benefits to manifest</li>
-                                </ul>
+                                <h4 class="font-semibold mb-1">Our Address</h4>
+                                <p class="text-gray-300">123 Wellness Way<br>Health Valley, CA 90210<br>United States</p>
                             </div>
                         </div>
-                        <div class="mt-8 p-4 bg-yellow-50 rounded-md">
-                            <p class="text-yellow-800"><strong>Note:</strong> Always consult with a qualified healthcare professional before starting any supplement regimen, especially if you have existing health conditions or are taking medications.</p>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Phone</h4>
+                                <p class="text-gray-300">Toll-Free: 1-800-123-4567<br>International: +1-555-123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-300">Customer Support: support@modifiedcitruspectin.com<br>Orders: orders@modifiedcitruspectin.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Business Hours</h4>
+                                <p class="text-gray-300">Monday - Friday: 9:00 AM - 5:00 PM PST<br>Saturday: 10:00 AM - 2:00 PM PST<br>Sunday: Closed</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-green-50 p-8 rounded-lg">
-                    <h2 class="text-2xl font-bold mb-6 text-center">Customer Success Stories</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-xl font-bold text-green-600">M</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Michael S.</h4>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                    </div>
-                                </div>
+
+                <div class="bg-gray-800 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
-                            <p class="text-gray-700 italic">"After three months on the MCP powder, my latest tests showed significant improvement in my cardiovascular markers. My doctor was impressed with the results!"</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-xl font-bold text-green-600">J</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Jennifer K.</h4>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star-half-alt text-yellow-500"></i>
-                                    </div>
-                                </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
-                            <p class="text-gray-700 italic">"I've been using the Advanced Formula for heavy metal detox, and my recent tests showed a 65% reduction in lead levels. Plus, I have more energy than I've had in years!"</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-xl font-bold text-green-600">R</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">Robert T.</h4>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                        <i class="fas fa-star text-yellow-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 italic">"I've tried many supplements over the years, but the difference with this MCP is remarkable. My inflammation markers are down, and I feel better overall. Highly recommended!"</p>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-                    </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Subject</label>
+                            <select class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option>Product Information</option>
+                                <option>Order Support</option>
+                                <option>Health Questions</option>
+                                <option>Research Inquiry</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="page-section">
-        <div class="py-16">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-6 text-center">Frequently Asked Questions</h1>
-                <p class="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto">Find answers to commonly asked questions about Modified Citrus Pectin, its benefits, usage, and more.</p>
-                
-                <div class="max-w-4xl mx-auto">
-                    <div class="mb-8">
-                        <h2 class="text-2xl font-bold mb-6">General Questions About MCP</h2>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">What is Modified Citrus Pectin?</h3>
-                                <p class="text-gray-700">Modified Citrus Pectin (MCP) is a complex polysaccharide derived from the pith of citrus fruit peels. It is modified through a special enzymatic and pH process to create smaller, more bioavailable molecules that can be absorbed into the bloodstream. Unlike regular pectin, which remains in the digestive tract, MCP can enter the circulation and exert systemic health effects.</p>
-                            </div>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-leaf text-white"></i>
                         </div>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">How is Modified Citrus Pectin different from regular pectin?</h3>
-                                <p class="text-gray-700">Regular pectin has a high molecular weight (50,000-300,000 Da) and cannot be absorbed by the body. MCP undergoes a special modification process that reduces its molecular weight to 5,000-15,000 Da, allowing it to enter the bloodstream and exert systemic health effects. The modification process also alters the degree of esterification and creates specific binding sites that enable MCP to interact with galectin-3 and other targets in the body.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">Is Modified Citrus Pectin safe to take?</h3>
-                                <p class="text-gray-700">Yes, Modified Citrus Pectin is generally recognized as safe for consumption. Clinical studies have shown it to be well-tolerated with minimal to no side effects. It's derived from the peel of citrus fruits, which have been consumed safely for centuries. However, as with any supplement, it's recommended to consult with a healthcare provider before starting MCP, especially if you have existing health conditions or are taking medications.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">Can I take Modified Citrus Pectin with other supplements or medications?</h3>
-                                <p class="text-gray-700">Modified Citrus Pectin can generally be taken alongside other supplements and medications. However, due to its fiber content, it's recommended to take MCP at least 1-2 hours apart from medications to avoid potential interference with absorption. If you're on blood-thinning medications, chemotherapy, or medications for serious health conditions, it's especially important to consult with your healthcare provider before adding MCP to your regimen.</p>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-bold">ModifiedCitrusPectin.com</h3>
                     </div>
-                    
-                    <div class="mb-8">
-                        <h2 class="text-2xl font-bold mb-6">Health Benefits & Research</h2>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">What are the main health benefits of Modified Citrus Pectin?</h3>
-                                <p class="text-gray-700 mb-4">Research indicates that MCP offers multiple health benefits, primarily through its ability to inhibit galectin-3. The main benefits include:</p>
-                                <ul class="list-disc list-inside text-gray-700">
-                                    <li>Cardiovascular support and reduction of fibrosis</li>
-                                    <li>Immune system enhancement</li>
-                                    <li>Heavy metal detoxification</li>
-                                    <li>Support for cellular health</li>
-                                    <li>Anti-inflammatory effects</li>
-                                    <li>Neurological and cognitive support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">How does Modified Citrus Pectin help with heavy metal detoxification?</h3>
-                                <p class="text-gray-700">Modified Citrus Pectin contains negatively charged carboxyl groups that can bind to positively charged heavy metal ions like lead, mercury, and arsenic, forming stable complexes. These complexes are then excreted through urine and feces. Unlike conventional chelating agents, MCP selectively binds to toxic metals without depleting essential minerals like zinc, calcium, and magnesium. Clinical studies have demonstrated MCP's effectiveness in reducing body burden of toxic metals with minimal side effects.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">What does the research say about Modified Citrus Pectin and immune function?</h3>
-                                <p class="text-gray-700">Research indicates that MCP enhances immune function through several mechanisms. It activates natural killer (NK) cells, which are important for eliminating virally infected and cancerous cells. MCP also stimulates cytotoxic T-cells and B-cells, supporting overall immune surveillance. Additionally, by inhibiting galectin-3, MCP helps regulate immune responses and reduce chronic inflammation, creating a more balanced immune environment in the body.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-8">
-                        <h2 class="text-2xl font-bold mb-6">Usage & Dosage</h2>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">What is the recommended dosage of Modified Citrus Pectin?</h3>
-                                <p class="text-gray-700">The typical therapeutic dosage ranges from 5-15 grams per day, often divided into multiple doses. For maintenance, 5 grams once daily is common. For specific health concerns like heavy metal detoxification, higher doses (10-15g daily) may be recommended. The powder form allows for flexible dosing, while capsules provide convenience. Optimal dosing may vary based on individual health needs and should be discussed with a healthcare provider.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">How long does it take to see benefits from Modified Citrus Pectin?</h3>
-                                <p class="text-gray-700">The timeframe for experiencing benefits from MCP varies depending on the individual and the health concern being addressed. Some people report feeling differences within a few weeks, while others may need 2-3 months of consistent use. For heavy metal detoxification, significant results typically appear after 1-3 months. For cardiovascular and cellular health support, longer-term use (3+ months) may be needed to observe meaningful changes in biomarkers.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">Can I take Modified Citrus Pectin on an empty stomach?</h3>
-                                <p class="text-gray-700">Yes, Modified Citrus Pectin can be taken on an empty stomach. In fact, some research suggests that taking MCP 30 minutes before meals or 1.5 hours after meals may enhance absorption. However, if you experience any digestive discomfort, taking MCP with food may be preferable. The powder form can be mixed with water, juice, or smoothies, while capsules should be taken with at least 8 ounces of water.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h2 class="text-2xl font-bold mb-6">Product-Specific Questions</h2>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">What's the difference between your MCP powder and capsules?</h3>
-                                <p class="text-gray-700">Both our powder and capsule forms contain the same high-quality Modified Citrus Pectin. The primary differences are convenience and dosing flexibility. The powder allows for precise dosage adjustments and may be more cost-effective for higher doses. It can be mixed into liquids but has a slightly bitter taste. Capsules offer convenience for travel and consistent dosing but require swallowing multiple capsules for therapeutic doses. The active ingredients and bioavailability are equivalent in both forms.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md mb-4">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">Are your Modified Citrus Pectin products suitable for vegetarians and vegans?</h3>
-                                <p class="text-gray-700">Yes, all our Modified Citrus Pectin products are suitable for both vegetarians and vegans. Our capsules use vegetable-derived capsule shells, and the MCP itself is derived entirely from plant sources (citrus fruit peels). We do not use any animal-derived ingredients in our manufacturing process. Additionally, our products are gluten-free, non-GMO, and free from artificial colors, flavors, and preservatives.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-3">How should I store my Modified Citrus Pectin products?</h3>
-                                <p class="text-gray-700">For optimal potency and freshness, store your Modified Citrus Pectin products in a cool, dry place away from direct sunlight. Once opened, the powder should be tightly sealed after each use to prevent moisture absorption. While refrigeration is not necessary, it may extend shelf life in very warm or humid environments. All our products include a best-by date on the packaging. If stored properly, MCP products typically maintain their potency for 2-3 years from the date of manufacture.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="page-section">
-        <div class="py-16">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-bold mb-6 text-center">Contact Us</h1>
-                <p class="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto">Have questions about Modified Citrus Pectin or our products? We're here to help. Reach out to our team of experts.</p>
-                
-                <div class="max-w-5xl mx-auto">
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-                            <div class="bg-white p-8 rounded-lg shadow-md h-full">
-                                <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-                                <form>
-                                    <div class="mb-4">
-                                        <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                                        <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
-                                    </div>
-                                    <div class="mb-6">
-                                        <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn-primary w-full">Send Message</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/2 px-4">
-                            <div class="bg-white p-8 rounded-lg shadow-md h-full">
-                                <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
-                                <div class="flex items-start mb-6">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                        <i class="fas fa-map-marker-alt text-green-600"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold mb-1">Our Address</h3>
-                                        <p class="text-gray-700">123 Wellness Way<br>Health Valley, CA 90210<br>United States</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start mb-6">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                        <i class="fas fa-phone-alt text-green-600"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold mb-1">Phone</h3>
-                                        <p class="text-gray-700">Toll-Free: 1-800-123-4567<br>International: +1-555-123-4567</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start mb-6">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                        <i class="fas fa-envelope text-green-600"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold mb-1">Email</h3>
-                                        <p class="text-gray-700">Customer Support: support@modifiedcitruspectin.com<br>Orders: orders@modifiedcitruspectin.com</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                        <i class="fas fa-clock text-green-600"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold mb-1">Business Hours</h3>
-                                        <p class="text-gray-700">Monday - Friday: 9:00 AM - 5:00 PM PST<br>Saturday: 10:00 AM - 2:00 PM PST<br>Sunday: Closed</p>
-                                    </div>
-                                </div>
-                                <div class="mt-8">
-                                    <h3 class="font-bold mb-4">Connect With Us</h3>
-                                    <div class="flex space-x-4">
-                                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-12">
-                        <div class="bg-white p-8 rounded-lg shadow-md">
-                            <h2 class="text-2xl font-bold mb-6 text-center">Newsletter Subscription</h2>
-                            <p class="text-center text-gray-700 mb-6">Stay updated with the latest research, product releases, and special offers by subscribing to our newsletter.</p>
-                            <form class="flex flex-wrap items-center justify-center max-w-2xl mx-auto">
-                                <div class="w-full md:w-2/3 md:pr-2 mb-4 md:mb-0">
-                                    <input type="email" placeholder="Enter your email address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
-                                </div>
-                                <div class="w-full md:w-1/3 md:pl-2">
-                                    <button type="submit" class="btn-primary w-full">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap -mx-4">
-                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-                    <h3 class="text-xl font-bold mb-4">ModifiedCitrusPectin.com</h3>
-                    <p class="mb-4">Your trusted source for high-quality Modified Citrus Pectin products and research-backed information.</p>
+                    <p class="text-gray-400 mb-4">Your trusted source for high-quality Modified Citrus Pectin products and research-backed information.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-white hover:text-green-400"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white hover:text-green-400"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white hover:text-green-400"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white hover:text-green-400"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-white" data-target="home">Home</a></li>
-                        <li><a href="#benefits" class="text-gray-300 hover:text-white" data-target="benefits">Benefits</a></li>
-                        <li><a href="#science" class="text-gray-300 hover:text-white" data-target="science">Science</a></li>
-                        <li><a href="#research" class="text-gray-300 hover:text-white" data-target="research">Research</a></li>
-                        <li><a href="#products" class="text-gray-300 hover:text-white" data-target="products">Products</a></li>
-                        <li><a href="#faq" class="text-gray-300 hover:text-white" data-target="faq">FAQ</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white" data-target="contact">Contact</a></li>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors">Benefits</a></li>
+                        <li><a href="#science" class="text-gray-400 hover:text-white transition-colors">Science</a></li>
+                        <li><a href="#research" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-                    <h3 class="text-xl font-bold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Return Policy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">FDA Disclaimer</a></li>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Return Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FDA Disclaimer</a></li>
                     </ul>
                 </div>
-                <div class="w-full md:w-1/4 px-4">
-                    <h3 class="text-xl font-bold mb-4">Customer Support</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> 1-800-123-4567</li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> support@modifiedcitruspectin.com</li>
-                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 123 Wellness Way, CA 90210</li>
-                    </ul>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Customer Support</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-blue-500"></i>
+                            <span class="text-gray-400">1-800-123-4567</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span class="text-gray-400 break-all">support@modifiedcitruspectin.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            <span class="text-gray-400">123 Wellness Way, CA 90210</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
-                <p>&copy; 2025 ModifiedCitrusPectin.com. All Rights Reserved.</p>
-                <p class="mt-2 text-sm text-gray-400">*These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400 mb-4">© 2025 ModifiedCitrusPectin.com. All Rights Reserved.</p>
+                <p class="text-sm text-gray-500">
+                    *These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageSections = document.querySelectorAll('.page-section');
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            // Mobile menu toggle
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Navigation
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('data-target');
-                    
-                    // Update active link
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Show target section
-                    pageSections.forEach(section => {
-                        section.classList.remove('active-section');
-                        if (section.id === targetId) {
-                            section.classList.add('active-section');
-                        }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                    
-                    // Scroll to top
-                    window.scrollTo(0, 0);
-                });
-            });
-
-            // Initialize charts
-            const benefitsCtx = document.getElementById('benefitsChart').getContext('2d');
-            new Chart(benefitsCtx, {
-                type: 'radar',
-                data: {
-                    labels: ['Cardiovascular', 'Immune Support', 'Detoxification', 'Cellular Health', 'Anti-inflammatory', 'Neurological'],
-                    datasets: [{
-                        label: 'MCP Benefits Strength',
-                        data: [9, 8, 10, 9, 7, 6],
-                        backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                        borderColor: 'rgba(76, 175, 80, 1)',
-                        pointBackgroundColor: 'rgba(76, 175, 80, 1)',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: 'rgba(76, 175, 80, 1)'
-                    }]
-                },
-                options: {
-                    scale: {
-                        ticks: {
-                            beginAtZero: true,
-                            max: 10
-                        }
-                    }
-                }
-            });
-
-            const bioavailabilityCtx = document.getElementById('bioavailabilityChart').getContext('2d');
-            new Chart(bioavailabilityCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['Regular Pectin', 'Modified Citrus Pectin'],
-                    datasets: [{
-                        label: 'Bioavailability (%)',
-                        data: [5, 95],
-                        backgroundColor: [
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(76, 175, 80, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(76, 175, 80, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100
-                        }
-                    }
-                }
-            });
-
-            const publicationsCtx = document.getElementById('publicationsChart').getContext('2d');
-            new Chart(publicationsCtx, {
-                type: 'line',
-                data: {
-                    labels: ['2000', '2005', '2010', '2015', '2020', '2025'],
-                    datasets: [{
-                        label: 'MCP Publications',
-                        data: [4, 12, 28, 45, 72, 94],
-                        fill: false,
-                        backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                        borderColor: 'rgba(76, 175, 80, 1)',
-                        tension: 0.1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
                 }
             });
         });
+
+        // Add animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.hover-lift');
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize elements for animation
+        document.querySelectorAll('.hover-lift').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on load
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuButton = document.querySelector('#mobile-menu-button');
+        const mobileMenu = document.querySelector('#mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Newsletter subscription
+        const newsletterForm = document.querySelector('#newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing to our newsletter!');
+            });
+        }
     </script>
 </body>
 </html>
